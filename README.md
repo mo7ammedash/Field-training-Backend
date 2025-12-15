@@ -1,1 +1,1 @@
-#Backend Developer | PHP & Laravel | Building APIs and Web Applications
+Backend Developer | PHP & Laravel | Building APIs and Web Applications
