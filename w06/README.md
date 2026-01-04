@@ -229,7 +229,7 @@ It follows best practices in:
 4. UI/UX
 5. Performance optimization
 
-**The system is fully functional, scalable, and ready for academic submission.**
+**The system is fully functional, scalable.**
 
 ### 👤 Author Information
 
