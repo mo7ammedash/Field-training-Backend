@@ -67,15 +67,19 @@ unique(product_id, supplier_id)
 
 **Product Model**
 
+```
 belongsToMany(Supplier::class)
 ->withPivot(['cost_price', 'lead_time_days'])
 ->withTimestamps();
+```
 
 **Supplier Model**
 
+```
 belongsToMany(Product::class)
 ->withPivot(['cost_price', 'lead_time_days'])
 ->withTimestamps();
+```
 
 ### 🧪 Database Seeding
 
@@ -174,6 +178,7 @@ Product::with('suppliers')->withCount('suppliers')
 
 ### 🗂️ Project Structure
 
+```
 app/
 ├── Models/
 │   ├── Product.php
@@ -187,19 +192,20 @@ app/
 
 database/
 ├── migrations/
-├── seeders/
+└── seeders/
 
 resources/views/
 ├── layouts/
 │   └── app.blade.php
-├── products/
-│   ├── index.blade.php
-│   ├── create.blade.php
-│   ├── edit.blade.php
-│   └── form.blade.php
+└── products/
+    ├── index.blade.php
+    ├── create.blade.php
+    ├── edit.blade.php
+    └── form.blade.php
 
 routes/
 └── web.php
+```
 
 ### 🌐 Routes / Pages
 
