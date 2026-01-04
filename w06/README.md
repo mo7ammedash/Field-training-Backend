@@ -1,4 +1,4 @@
-# 🛒 Product & Supplier Management System (Laravel)
+# ⚒️ Product & Supplier Management System (Laravel)
 
 ## 📌 Project Overview
 
@@ -233,8 +233,9 @@ It follows best practices in:
 ### 👤 Author Information
 
 - **Name:** Mohamed Ashour
-- **Field:** Software Engineering
-- **Technology:** Laravel Framework
+- **GitHub:** https://github.com/mo7ammedash
+- **Email:** mohammedashour664@gmail.com
+- **Field training Back-End**  || **Technology:** Laravel Framework
 - **Task:** Task 06 – Many-to-Many Relationship with Pivot Data
 
 📅 2026
