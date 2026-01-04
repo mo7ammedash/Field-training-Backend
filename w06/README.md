@@ -136,7 +136,9 @@ Shows suppliers with pivot data:
 Users receive feedback after every action:
 
 ✅ Product created successfully
+
 🔄 Product updated successfully
+
 ❌ Product deleted successfully
 
 ## 🛡️ Validation Rules
@@ -174,14 +176,14 @@ Product::with('suppliers')->withCount('suppliers')
 
 app/
 ├── Models/
-│ ├── Product.php
-│ └── Supplier.php
+│   ├── Product.php
+│   └── Supplier.php
 ├── Http/
-│ ├── Controllers/
-│ │ └── ProductController.php
-│ └── Requests/
-│ ├── StoreProductRequest.php
-│ └── UpdateProductRequest.php
+│   ├── Controllers/
+│   │   └── ProductsController.php
+│   └── Requests/
+│       ├── StoreProductRequest.php
+│       └── UpdateProductRequest.php
 
 database/
 ├── migrations/
@@ -189,12 +191,12 @@ database/
 
 resources/views/
 ├── layouts/
-│ └── app.blade.php
+│   └── app.blade.php
 ├── products/
-│ ├── index.blade.php
-│ ├── create.blade.php
-│ ├── edit.blade.php
-│ └── form.blade.php
+│   ├── index.blade.php
+│   ├── create.blade.php
+│   ├── edit.blade.php
+│   └── form.blade.php
 
 routes/
 └── web.php
@@ -222,9 +224,9 @@ It follows best practices in:
 
 ### 👤 Author Information
 
-Name: Mohamed Ashour
-Field: Software Engineering
-Technology: Laravel Framework
-Task: Task 06 – Many-to-Many Relationship with Pivot Data
+- Name: Mohamed Ashour
+- Field: Software Engineering
+- Technology: Laravel Framework
+- Task: Task 06 – Many-to-Many Relationship with Pivot Data
 
 📅 2026
