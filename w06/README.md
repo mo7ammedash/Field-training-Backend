@@ -119,9 +119,11 @@ Price (must be > 0)
 
 📌 Required input structure:
 
+```
 suppliers[SUPPLIER_ID][selected]
 suppliers[SUPPLIER_ID][cost_price]
 suppliers[SUPPLIER_ID][lead_time_days]
+```
 
 ## 📋 Products List Page
 
@@ -133,6 +135,7 @@ Shows suppliers with pivot data:
 **Buttons:**
 
 ✏ Edit
+
 🗑 Delete (with confirmation)
 
 ### 🔔 Flash Messages
@@ -170,9 +173,9 @@ Validation is handled using:
 ### ⚡ Performance Optimization (Bonus)
 
 To avoid the N+1 problem, eager loading is used:
-
+```
 Product::with('suppliers')->withCount('suppliers')
-
+```
 ✔ Efficient queries
 ✔ Supplier count available per product
 
@@ -230,9 +233,9 @@ It follows best practices in:
 
 ### 👤 Author Information
 
-- Name: Mohamed Ashour
-- Field: Software Engineering
-- Technology: Laravel Framework
-- Task: Task 06 – Many-to-Many Relationship with Pivot Data
+- **Name:** Mohamed Ashour
+- **Field:** Software Engineering
+- **Technology:** Laravel Framework
+- **Task:** Task 06 – Many-to-Many Relationship with Pivot Data
 
 📅 2026
