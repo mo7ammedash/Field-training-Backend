@@ -134,9 +134,8 @@ Shows suppliers with pivot data:
 
 **Buttons:**
 
-✏ Edit
-
-🗑 Delete (with confirmation)
+- ✏ Edit
+- 🗑 Delete (with confirmation)
 
 ### 🔔 Flash Messages
 
