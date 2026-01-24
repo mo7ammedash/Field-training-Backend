@@ -1,4 +1,4 @@
-# 🛒 Product & Supplier Management System (Laravel)
+# ⚒️ Product & Supplier Management System (Laravel)
 
 ## 📌 Project Overview
 
@@ -67,15 +67,19 @@ unique(product_id, supplier_id)
 
 **Product Model**
 
+```
 belongsToMany(Supplier::class)
 ->withPivot(['cost_price', 'lead_time_days'])
 ->withTimestamps();
+```
 
 **Supplier Model**
 
+```
 belongsToMany(Product::class)
 ->withPivot(['cost_price', 'lead_time_days'])
 ->withTimestamps();
+```
 
 ### 🧪 Database Seeding
 
@@ -115,9 +119,11 @@ Price (must be > 0)
 
 📌 Required input structure:
 
+```
 suppliers[SUPPLIER_ID][selected]
 suppliers[SUPPLIER_ID][cost_price]
 suppliers[SUPPLIER_ID][lead_time_days]
+```
 
 ## 📋 Products List Page
 
@@ -128,15 +134,17 @@ Shows suppliers with pivot data:
 
 **Buttons:**
 
-✏ Edit
-🗑 Delete (with confirmation)
+- ✏ Edit
+- 🗑 Delete (with confirmation)
 
 ### 🔔 Flash Messages
 
 Users receive feedback after every action:
 
 ✅ Product created successfully
+
 🔄 Product updated successfully
+
 ❌ Product deleted successfully
 
 ## 🛡️ Validation Rules
@@ -164,40 +172,42 @@ Validation is handled using:
 ### ⚡ Performance Optimization (Bonus)
 
 To avoid the N+1 problem, eager loading is used:
-
+```
 Product::with('suppliers')->withCount('suppliers')
-
+```
 ✔ Efficient queries
 ✔ Supplier count available per product
 
 ### 🗂️ Project Structure
 
+```
 app/
 ├── Models/
-│ ├── Product.php
-│ └── Supplier.php
+│   ├── Product.php
+│   └── Supplier.php
 ├── Http/
-│ ├── Controllers/
-│ │ └── ProductController.php
-│ └── Requests/
-│ ├── StoreProductRequest.php
-│ └── UpdateProductRequest.php
+│   ├── Controllers/
+│   │   └── ProductsController.php
+│   └── Requests/
+│       ├── StoreProductRequest.php
+│       └── UpdateProductRequest.php
 
 database/
 ├── migrations/
-├── seeders/
+└── seeders/
 
 resources/views/
 ├── layouts/
-│ └── app.blade.php
-├── products/
-│ ├── index.blade.php
-│ ├── create.blade.php
-│ ├── edit.blade.php
-│ └── form.blade.php
+│   └── app.blade.php
+└── products/
+    ├── index.blade.php
+    ├── create.blade.php
+    ├── edit.blade.php
+    └── form.blade.php
 
 routes/
 └── web.php
+```
 
 ### 🌐 Routes / Pages
 
@@ -218,13 +228,12 @@ It follows best practices in:
 4. UI/UX
 5. Performance optimization
 
-**The system is fully functional, scalable, and ready for academic submission.**
+**The system is fully functional, scalable.**
 
 ### 👤 Author Information
 
-Name: Mohamed Ashour
-Field: Software Engineering
-Technology: Laravel Framework
-Task: Task 06 – Many-to-Many Relationship with Pivot Data
-
-📅 2026
+- **Name:** Mohamed Ashour
+- **GitHub:** https://github.com/mo7ammedash
+- **Email:** mohammedashour664@gmail.com
+- **Field training Back-End**  || **Technology:** Laravel Framework
+- **Task:** Task 06 – Many-to-Many Relationship with Pivot Data
