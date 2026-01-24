@@ -289,6 +289,20 @@ Open in browser:
 http://127.0.0.1:8000
 ```
 
+### 🧪 Verifying Requirement (8) – Feature Tests
+
+To verify **Requirement 8: Feature Tests (Authentication & Authorization)**, follow the steps below.
+
+---
+
+## ▶️ Run All Tests
+
+Execute the following command from the project root:
+
+```bash
+php artisan test
+```
+
 ### 🔐 User Scenarios
 ## Guest
 
