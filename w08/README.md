@@ -80,18 +80,30 @@ This README summarizes all improvements on top of the previous project.
 ### 🗂️ File Structure for Task 8
 
 ```
-resources/views/
-├── layouts/
-│   └── app.blade.php           # Unified layout + navbar + flash messages
-├── dashboard.blade.php         # Protected dashboard with metrics and latest products
-├── products/
-│   ├── index.blade.php         # Product listing (role-aware)
-│   ├── create.blade.php        # Add product form (with validation and supplier inputs)
-│   └── edit.blade.php          # Edit product form
-├── categories/
-│   └── index.blade.php         # Categories listing
-└── suppliers/
-    └── index.blade.php         # Suppliers listing
+app/
+├── Http/
+│   ├── Controllers/
+│   │   ├── DashboardController.php      # Loads dashboard metrics & latest products
+│   │   ├── ProductController.php        # CRUD + validation + flash messages
+│   │   ├── CategoryController.php       # Handles categories listing
+│   │   └── SupplierController.php       # Handles suppliers listing
+
+resources/
+├── views/
+│   ├── layouts/
+│   │   └── app.blade.php               # Unified layout + navbar + flash messages
+│   ├── dashboard.blade.php             # Protected dashboard with metrics & latest products
+│   ├── products/
+│   │   ├── index.blade.php             # Product listing (role-aware)
+│   │   ├── create.blade.php            # Add product form (validation + suppliers)
+│   │   └── edit.blade.php              # Edit product form
+│   ├── categories/
+│   │   └── index.blade.php             # Categories listing
+│   └── suppliers/
+│       └── index.blade.php             # Suppliers listing
+
+routes/
+└── web.php                             # Dashboard, products, categories, suppliers routes       
 ```
 
 ---
