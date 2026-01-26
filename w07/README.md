@@ -89,26 +89,25 @@ Cascade delete applies only to pivot rows.
 
 Products are displayed in **cards**, each showing details and suppliers:
 
----
+```
 ┌───────────────────────────┐
-│ Product Name │
-│ Price: $100 │
-│ Category: Electronics │
-│ Owner: user@example.com
-│
-│ ------------------------- │
-│ Suppliers (2): │
-│ - Supplier A | Cost: 80 │
-│ - Supplier B | Cost: 75 │
-│ │
-│ [Edit] [Delete] (if auth)│
+│ Product Name                   │
+│ Price: $100                    │
+│ Category: Electronics          │
+│ Owner: user@example.com        |
+│                                |
+│ -------------------------      │
+│ Suppliers (2):                 │
+│ - Supplier A | Cost: 80,lead:3 │
+│ - Supplier B | Cost: 75,lead:5 │
+│                                │
+│ [Edit] [Delete] (if auth)      │
 └───────────────────────────┘
-
----
+```
 
 ### Guest, User, Admin Scenarios
 
----
+```
 
 ┌────────────┐
 │ Guest │
@@ -123,8 +122,8 @@ Products are displayed in **cards**, each showing details and suppliers:
 ┌──────────────┐
 │ Admin │
 └──────────────┘
-
----
+| Manage all products
+```
 
 
 - **Guest:** Can only view products  
@@ -158,9 +157,10 @@ Products are displayed in **cards**, each showing details and suppliers:
   - Guest: Register/Login  
   - Authenticated User/Admin: Logout + Name displayed  
 
----
 
 ## 🗂️ Project Structure
+
+```
 
 app/  
 ├── Models/  
@@ -182,11 +182,12 @@ app/
 database/  
 ├── migrations/  
 │   ├── create_users_table.php  
-│   ├── add_role_to_users_table.php   # Adds 'role' column (user/admin)  
 │   ├── create_categories_table.php  
 │   ├── create_products_table.php  
 │   ├── create_suppliers_table.php  
-│   └── create_product_supplier_table.php  
+│   └── create_product_supplier_table.php
+|   ├── add_role_to_users_table.php   # Adds 'role' column
+|   (user/admin)  
 └── seeders/  
     ├── CategorySeeder.php  
     ├── SupplierSeeder.php  
@@ -202,6 +203,7 @@ resources/views/
 
 routes/  
 └── web.php                           # Route definitions with auth middleware  
+```
 
 ---
 
@@ -217,6 +219,107 @@ routes/
 | Logout         | `/logout`             | Authenticated |
 
 ---
+
+## 🔧 How to Run the Project (Step by Step)
+
+### 1️⃣ Requirements
+Before running the project, make sure you have the following installed:
+
+- PHP >= 8.1  
+- Composer  
+- MySQL (or any supported database)  
+- Node.js & npm  
+
+References:
+- https://laravel.com/docs/10.x/deployment#server-requirements  
+- https://getcomposer.org/  
+- https://nodejs.org/
+
+---
+
+### 2️⃣ Clone the Repository
+
+```
+bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+cd YOUR_REPOSITORY
+```
+### 3️⃣ Install Backend Dependencies (Laravel)
+```
+composer install
+```
+### 4️⃣ Install Frontend Dependencies (Laravel Breeze)
+
+```
+composer require laravel/breeze --dev
+php artisan breeze:install
+npm install
+npm run build
+npm run dev
+```
+### 5️⃣ Environment Setup
+```
+cp .env.example .env
+php artisan key:generate
+```
+### 6️⃣ Database Configuration
+- Edit the .env file and update database credentials:
+```
+DB_DATABASE=your_database_name
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+### 7️⃣ Run Migrations & Seeders
+```
+php artisan mi:f 
+php artisan db:seed
+```
+### 8️⃣ Admin Account (Demo)
+- After seeding, you can log in as admin using:
+  * Email: admin@account.com
+  * Password: 123
+
+ ### 9️⃣ Run the Application
+ 
+ ```
+ php artisan serve
+ ```
+Open in browser:
+```
+http://127.0.0.1:8000
+```
+
+### 🧪 Verifying Requirement (8) – Feature Tests
+
+To verify **Requirement 8: Feature Tests (Authentication & Authorization)**, follow the steps below.
+
+---
+
+## ▶️ Run All Tests
+
+Execute the following command from the project root:
+
+```bash
+php artisan test
+```
+
+### 🔐 User Scenarios
+## Guest
+
+- Can view all products.
+ Cannot create, edit, or delete products.
+ Redirected to login when accessing protected routes.
+
+## Authenticated User
+
+- Can create products.
+- Can edit/delete only their own products.
+- Sees only their own products.
+ 
+## Admin
+- Can view all products.
+- Can create products.
+- Can edit/delete any product.
 
 ## 🏁 Conclusion
 
