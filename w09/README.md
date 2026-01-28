@@ -33,9 +33,13 @@ Example URLs:
 ## 🖥 Blade Views
 
 resources/views/layouts/app.blade.php → Master layout
+
 resources/views/products/index.blade.php → Products listing (Task 9)
+
 resources/views/products/create.blade.php → Add product
+
 resources/views/products/edit.blade.php → Edit product
+
 Flash messages & toast notifications for CRUD actions
 
 ---
@@ -92,12 +96,14 @@ php artisan key:generate
 ```
 
 - Set database credentials in .env:
-  `` `   DB_CONNECTION=mysql
+```
+DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=your_database
 DB_USERNAME=your_user
-DB_PASSWORD=your_password ``
+DB_PASSWORD=your_password 
+```
 
 4. Run migrations & seeders:
 
