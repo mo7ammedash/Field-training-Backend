@@ -58,47 +58,41 @@ document.querySelector('#image').addEventListener('change', function(e){
 
 ## Create (store):
 
-    Uploads the image if provided.
-
-    Stores the path in image_path.
+- Uploads the image if provided.
+- Stores the path in image_path.
 
 ## Update (update):
 
-    Deletes old image safely (if it exists) when a new image is uploaded.
-
-    Updates image_path.
+- Deletes old image safely (if it exists) when a new image is uploaded.
+- Updates image_path.
 
 ## Delete (destroy):
 
-    Deletes associated image from storage when product is deleted.
+- Deletes associated image from storage when product is deleted.
 
-✅ Safe handling ensures no crashes if files are missing.
+      ✅ Safe handling ensures no crashes if files are missing.
 
 ### 🖼️ 4. UI Display
 
 ## Index / Product List:
 
-    Shows thumbnails for products with images.
-
-    Fallback placeholder for products without images.
-
-    CSS ensures thumbnails are uniform (object-fit: cover).
+- Shows thumbnails for products with images.
+- Fallback placeholder for products without images.
+- CSS ensures thumbnails are uniform (object-fit: cover).
 
 ## Dashboard Latest Products Table:
 
-    Shows full product images.
-
-    Uses the same fallback for missing images.
+- Shows full product images.
+- Uses the same fallback for missing images.
 
 ## Create/Edit Forms:
 
-    Live preview of selected image before submission.
+- Live preview of selected image before submission.
 
 ### ✨ 5. Bonus Enhancements
 
-    👀 Live Preview: preview image before upload.
-
-    📐 Standard Thumbnail Styling: uniform thumbnails using CSS (object-fit: cover).
+- 👀 Live Preview: preview image before upload.
+- 📐 Standard Thumbnail Styling: uniform thumbnails using CSS (object-fit: cover).
 
 ### 📂 File Structure Changes
 ```
@@ -141,9 +135,8 @@ php artisan storage:link
 3. Select an image file (jpg/png/webp, max 2MB).
 4. Preview the image before submission.
 5. Submit the form. The image will be stored and shown:
-    Thumbnail in product lists.
-
-    Full image in dashboard latest products table.
+   - Thumbnail in product lists.
+   - Full image in dashboard latest products table.
 
 6. Updating the image will safely replace the old one.
 
