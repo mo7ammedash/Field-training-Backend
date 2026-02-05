@@ -1,4 +1,4 @@
-# 🧩 Task 11 — Soft Delete & Trash System Enhancement
+# 🧩 Task 11: Soft Delete, Trash, Restore, Final Delivery
 
 This project is an extension and improvement of the previous Laravel tasks.  
 Task 11 upgrades the system with a safe deletion workflow using **Soft Deletes**, a professional **Trash management page**, authorization policies, seed data, and feature tests.
@@ -179,7 +179,7 @@ The submission includes:
 All screenshots are inside the /screenshots folder.
 
 ## ✅ Expected Behavior
-
+```
 ✔ Products are safely soft-deleted.
 ✔ Trash page lists deleted products.
 ✔ Restore works correctly.
@@ -187,7 +187,7 @@ All screenshots are inside the /screenshots folder.
 ✔ Authorization prevents cross-user actions.
 ✔ Seeders prepare demo environment.
 ✔ Tests validate trash workflow.
-
+```
 ## 🎯 Summary
 
 Task 11 transforms the project into a safer, more professional system by introducing:
